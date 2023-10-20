@@ -96,6 +96,6 @@ public class Compik
         Monitor monitor = new Monitor("ACER", 27);
         Computer myComputer = new Computer(ComputerBrand.ACER, processor, memory, monitor);
 
-        System.out.println(myComputer + "\n\n\n");
+        System.out.println(myComputer);
     }
 }

@@ -35,12 +35,13 @@ class Shop implements Printablee
     }
 }
 
-public class Printable {
-    public static void main(String[] args) {
+public class Printable
+{
+    public static void main(String[] args)
+    {
         Printablee[] objects = {new Book("Моя автобиография"), new Shop("Лучший магазин мира"), new Book("Права и обязанности")};
 
-        for (Printablee object : objects) {
+        for (Printablee object : objects)
             object.print();
-        }
     }
 }
