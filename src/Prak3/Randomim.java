@@ -32,9 +32,8 @@ public class Randomim
     public static double[] RandomArrUsingMath(int length)
     {
         double[] array = new double[length];
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i++)
             array[i] = Math.random();
-        }
         return array;
     }
 
