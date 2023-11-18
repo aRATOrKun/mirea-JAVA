@@ -1,16 +1,16 @@
 package Prak12;
 
-/*import javax.swing.*;
+import javax.swing.*;
 
 public class ImageWindow extends JFrame
 {
-    private ImageWindow imageIcon;
+    private ImageIcon imageIcon;
     private JLabel imageLabel;
 
     public ImageWindow(String imagePath)
     {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(1920, 1080);
         setLocationRelativeTo(null);
         setTitle("Image Window");
 
@@ -28,7 +28,8 @@ public class ImageWindow extends JFrame
             System.out.println("Необходимо указать путь к картинке");
             return;
         }
+
         String imagePath = args[0];
         SwingUtilities.invokeLater(() -> new ImageWindow(imagePath));
     }
-}*/
+}

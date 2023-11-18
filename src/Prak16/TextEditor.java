@@ -16,7 +16,8 @@ public class TextEditor extends JFrame implements ActionListener
         new TextEditor();
     }
 
-    public TextEditor() {
+    public TextEditor()
+    {
         setTitle("Text Editor");
         setSize(400, 400);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

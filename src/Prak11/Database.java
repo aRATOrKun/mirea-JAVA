@@ -11,7 +11,7 @@ public class Database
         Date receivingDateTime = new Date(123, 8, 2, 9, 0, 0);
 
         System.out.println("Фамилия разработчика: " + lastName);
-        System.out.println("Дата и время получения задания: " + receivingDateTime.toString());
-        System.out.println("Дата и время сдачи задания: " + currentDateTime.toString());
+        System.out.println("Дата и время получения задания: " + receivingDateTime);
+        System.out.println("Дата и время сдачи задания: " + currentDateTime);
     }
 }

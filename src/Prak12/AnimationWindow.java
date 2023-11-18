@@ -1,68 +1,51 @@
 package Prak12;
 
-/*import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
+import javax.swing.*;
+import java.awt.*;
 
-public class AnimationWindow {
-    private JFrame frame;
-    private JLabel animationLabel;
-    private Timer animationTimer;
+public class AnimationWindow extends JFrame {
+
+    private Image[] frames;
     private int currentFrame;
+    private Timer animationTimer;
 
     public AnimationWindow() {
-        frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        // Создаем массив изображений
+        frames = new Image[4];
+        frames[0] = Toolkit.getDefaultToolkit().getImage("frame1.png");
+        frames[1] = Toolkit.getDefaultToolkit().getImage("frame2.png");
+        frames[2] = Toolkit.getDefaultToolkit().getImage("frame3.png");
+        frames[3] = Toolkit.getDefaultToolkit().getImage("frame4.png");
 
-        animationLabel = new JLabel();
-        frame.add(animationLabel);
+        // Инициализируем текущий кадр
+        currentFrame = 0;
 
-        BufferedImage[] frames = loadFrames(); // Загрузка последовательности кадров изображения
-        int delay = 100; // Задержка между кадрами в миллисекундах
-
-        animationTimer = new Timer(delay, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                currentFrame++;
-                if (currentFrame >= frames.length) {
-                    currentFrame = 0;
-                }
-                animationLabel.setIcon(new ImageIcon(frames[currentFrame]));
-            }
+        // Создаем таймер для анимации
+        animationTimer = new Timer(100, e -> {
+            // Переключаемся на следующий кадр
+            currentFrame = (currentFrame + 1) % frames.length;
+            // Перерисовываем окно
+            repaint();
         });
 
-        currentFrame = -1;
+        // Запускаем таймер
+        animationTimer.start();
+
+        // Настраиваем окно
+        setTitle("Анимация");
+        setSize(400, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
-    private BufferedImage[] loadFrames() {
-        // Здесь можно загрузить последовательность кадров изображения
-        // и вернуть массив BufferedImage
-        // Например:
-        BufferedImage[] frames = new BufferedImage[4];
-        frames[0] = loadImage("frame1.png");
-        frames[1] = loadImage("frame2.png");
-        frames[2] = loadImage("frame3.png");
-        frames[3] = loadImage("frame4.png");
-        return frames;
-    }
-
-    public void startAnimation() {
-        if (animationTimer != null) {
-            animationTimer.start();
-        }
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        // Отрисовываем текущий кадр на окне
+        g.drawImage(frames[currentFrame], 0, 0, null);
     }
 
     public static void main(String[] args) {
-        AnimationWindow window = new AnimationWindow();
-        window.startAnimation();
-
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                window.frame.setVisible(true);
-            }
-        });
+        SwingUtilities.invokeLater(AnimationWindow::new);
     }
-}*/
+}

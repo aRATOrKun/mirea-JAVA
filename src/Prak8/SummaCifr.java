@@ -4,7 +4,7 @@ public class SummaCifr
 {
     public static void main(String[] args)
     {
-        int N = 12345;
+        int N = 123045;
         int sum = sumOfDigits(N);
         System.out.println("Сумма цифр числа " + N + " равна " + sum);
     }

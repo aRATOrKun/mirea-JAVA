@@ -1,7 +1,7 @@
 package Prak9_10;
 
-public interface Comparable<TestStudent>
+public interface Comparable<T>
 {
-    public int compareTo(TestStudent other);
+    public int compareTo(T other);
 
 }
