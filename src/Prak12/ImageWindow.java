@@ -10,7 +10,7 @@ public class ImageWindow extends JFrame
     public ImageWindow(String imagePath)
     {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1920, 1080);
+        setSize(1600, 800);
         setLocationRelativeTo(null);
         setTitle("Image Window");
 

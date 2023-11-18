@@ -13,10 +13,10 @@ public class AnimationWindow extends JFrame
     public AnimationWindow()
     {
         frames = new Image[4];
-        frames[0] = Toolkit.getDefaultToolkit().getImage("frame1.png");
-        frames[1] = Toolkit.getDefaultToolkit().getImage("frame2.png");
-        frames[2] = Toolkit.getDefaultToolkit().getImage("frame3.png");
-        frames[3] = Toolkit.getDefaultToolkit().getImage("frame4.png");
+        frames[0] = Toolkit.getDefaultToolkit().getImage("1.jpeg");
+        frames[1] = Toolkit.getDefaultToolkit().getImage("2.jpeg");
+        frames[2] = Toolkit.getDefaultToolkit().getImage("3.jpeg");
+        frames[3] = Toolkit.getDefaultToolkit().getImage("4.jpeg");
 
         currentFrame = 0;
 
